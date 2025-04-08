@@ -12,7 +12,7 @@ services:
       - RAG_WEB_SEARCH_CONCURRENT_REQUESTS=10
       - SEARXNG_QUERY_URL=http://searxng:8080/search?q=<query>
     volumes:
-      - open-webui-data:/app/backend/data
+      - ./open-webui:/app/backend/data
     restart: unless-stopped
 
   searxng:
@@ -26,6 +26,3 @@ services:
     environment:
       - SEARXNG_BIND_ADDRESS=0.0.0.0
       - SEARXNG_PORT=8080
-
-volumes:
-  open-webui-data:
