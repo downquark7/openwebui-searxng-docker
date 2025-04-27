@@ -1,3 +1,5 @@
+Start with installing docker
+
 ```shell
 docker compose up -d
 ```
